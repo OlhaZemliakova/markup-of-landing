@@ -1,0 +1,103 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+
+.baner {
+    background-image: url("../assets/images/header.-bg.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 100vh;
+    background-size: cover;
+    @include flex-cen;
+    justify-content: center;
+    max-height: 862px;
+    position: relative;
+
+    .container {
+        @include flex-cen;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include font-josefin;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @include font-josefin;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.31em;
+        color: $white;
+        margin-bottom: 48px;
+    }
+
+    &__search {
+        width: 100%;
+        max-width: 647px;
+        background: $white;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 5px 4px 36px;
+    }
+
+    & input {
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+
+        &::placeholder {
+            @include font-josefin;
+            @include font-par;
+            color: $light-gray;
+        }
+    }
+
+    & button {
+        border: 0;
+        background: $blue;
+        padding: 16px 24px;
+        padding-right: 12px;
+        cursor: pointer;
+        color: $white;
+        @include font-aleo;
+
+        & img {
+            width: 16px;
+            margin-right: 12px;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 14vh;
+
+        a {
+            text-decoration: none;
+            @include flex-cen;
+            flex-direction: column;
+        }
+
+        p {
+            @include font-josefin;
+            color: $white;
+            @include font-par;
+            margin-bottom: 8px;
+        }
+
+        span {
+            width: 14px;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+.reviews {
+    background-image: url("../assets/images/reviews.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    padding: 120px 0 180px;
+
+    @include breakpoint(sm) {
+        padding: 60px 120px;
+    }
+
+    @include breakpoint(md) {
+        padding: 60px 120px;
+    }
+
+    &__bg {
+        background-color: $grey;
+        align-items: stretch;
+    }
+
+    h2 {
+        @include aleo-title;
+        color: $white;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .thumb {
+        width: 100%;
+        // max-width: 380px; 
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 100%;
+
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+
+            @include breakpoint(md) {
+                width: 100%;
+            }
+
+        }
+    }
+
+
+}
+
+.wraper {
+    padding: 48px 60px;
+
+    h3 {
+        @include font-josefin;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 11px;
+    }
+
+    p {
+        @include text;
+    }
+
+}
